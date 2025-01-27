@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours & Experiences</title>
+  <link rel="stylesheet" href="../CSS/tours&EX.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+        <img src="../1.png" alt="Kikwetu Consortium Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./localB.html">Local Businesses</a></li>
+            <li><a href="./tour&EX.html">Tours & Experiences</a></li>
+            <li><a href="./Copyright P.html">Copyright Protection</a></li>
+            <li><a href="./community.html">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <!-- Tours & Experiences Section -->
+  <section id="tours" class="section">
+      <div class="tours-header">
+          <h1>Tours & Experiences</h1>
+          <p>Explore Kibra like never before with guided tours and cultural experiences.</p>
+      </div>
+
+      <div class="tour-card">
+          <div class="card">
+              <img src="../teenwork.jpg" alt="Cultural Walk">
+              <div class="card-content">
+                  <h3>Cultural Walks</h3>
+                  <p>Immerse yourself in Kibra's vibrant street art, markets, and community spaces.</p>
+                  <a href="#book" class="cta-btn" onclick="bookTour('Cultural Walks')">Book Now</a>
+              </div>
+          </div>
+          <div class="card">
+              <img src="../uweza 1.jpg" alt="Culinary Tour">
+              <div class="card-content">
+                  <h3>Food & Culinary Adventures</h3>
+                  <p>Taste authentic dishes and explore Kibra's street food gems.</p>
+                  <a href="#book" class="cta-btn" onclick="bookTour('Culinary Adventures')">Book Now</a>
+              </div>
+          </div>
+          <div class="card">
+              <img src="../food.jpg" alt="History Tour">
+              <div class="card-content">
+                  <h3>History & Heritage Tours</h3>
+                  <p>Discover the rich history of Kibra and its inspiring stories.</p>
+                  <a href="#book" class="cta-btn" onclick="bookTour('History Tour')">Book Now</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="contact">
+      <div class="social-links">
+          <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+      </div>
+      <div class="contact-info">
+          <p>Email: info@discoverkibra.com</p>
+          <p>Phone: +254 123 456 789</p>
+      </div>
+      <div class="newsletter">
+          <p>Stay Updated with Kibra’s Latest Events and Offers!</p>
+          <form>
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+          </form>
+      </div>
+  </footer>
+
+  <script>
+    function bookTour(tourName) {
+      alert(`You have selected the ${tourName}. Booking options coming soon!`);
+    }
+  </script>
+</body>
+</html>
