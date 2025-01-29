@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #000000;
+  background: linear-gradient(45deg, #000000, #000000);
   color: #fff;
   padding: 1rem 2rem;
 }
@@ -41,14 +41,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f39c12;
+  color: #52f312;
 }
 
 
 /* Hero Section */
 .hero {
   background: url('../locals.jpeg') center/cover no-repeat;
-  color: #fff;
+  color: #000000;
   text-align: center;
   padding: 4rem 2rem;
 }
@@ -98,7 +98,7 @@ nav ul li a:hover {
 /* CTA Button */
 .cta-btn {
   display: inline-block;
-  background: #f39c12;
+  background: #2e4e14;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -107,18 +107,18 @@ nav ul li a:hover {
 }
 
 .cta-btn:hover {
-  background: #e67e22;
+  background: #1d8122;
 }
 
 footer {
-  background: #222;
+  background: linear-gradient(45deg, #000000, #1b472b);
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
 }
 
 footer a {
-  color: #f39c12;
+  color: #1d8122;
   text-decoration: none;
 }
 
@@ -134,7 +134,7 @@ footer input {
 }
 
 footer button {
-  background: #f39c12;
+  background: #2e4e14;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -144,7 +144,7 @@ footer button {
 }
 
 footer button:hover {
-  background: #e67e22;
+  background: #1d8122;
 }
 
 @media (max-width: 768px) {
