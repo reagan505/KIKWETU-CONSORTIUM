@@ -21,59 +21,87 @@
         <li><a href="../HTML/newsUP.html">News Update</a></li>
         <li><a href="../HTML/learn.html">Learn</a></li>
         <li><a href="../HTML/community.html">Community</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+        <li><a href="../HTML/contact.html">Contact</a></li>
+      </ul>
     </nav>
 </header>
 
-
-  <section id="ethical-business">
-    <h2>Ethical Business Practices</h2>
+<section id="ethical-business">
+  <h2 class="section-title">Ethical Business Practices</h2>
+  <div class="accordion-container">
     <button class="accordion">Fair Pricing Strategies</button>
     <div class="panel">
-      <p>Fair pricing means setting clear and honest prices for your products or services. Avoid middlemen who take high commissions. Your prices should reflect the real value of what you offer, considering costs and local standards. Being transparent builds trust with customers and helps your business grow. Fair pricing attracts loyal customers and makes your business more successful in the long run, especially in the tourism industry. Keep it simple, fair, and clear for everyone to understand.</p>
+      <p>
+        Fair pricing means setting clear and honest prices for your products or services. Avoid middlemen who take high
+        commissions. Your prices should reflect the real value of what you offer, considering costs and local standards.
+        Being transparent builds trust with customers and helps your business grow. Fair pricing attracts loyal
+        customers and makes your business more successful in the long run, especially in the tourism industry. Keep it
+        simple, fair, and clear for everyone to understand.
+      </p>
     </div>
 
     <button class="accordion">Transparency in Customer Service</button>
     <div class="panel">
       <p>Customer service is key to building trust. Find tips for maintaining transparency and exceptional service.</p>
     </div>
+  </div>
 
-    <h2>Understanding Copyrights</h2>
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/tV6j_ZLEqkU?si=EU2kEcikDWGOAJDV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <!-- Embed YouTube Video -->
-    </div>
-  </section>
+  <h2 class="section-title">Understanding Copyrights</h2>
+  <div class="video-container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/tV6j_ZLEqkU?si=EU2kEcikDWGOAJDV"
+      title="Understanding Copyrights"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
 
-  <!-- New Section for Marketing Strategy & Perception -->
-  <section id="marketing-strategy">
-    <h2>Education on Marketing Strategy </h2>
+<section id="marketing-strategy">
+  <h2 class="section-title">Education on Marketing Strategy</h2>
 
+  <div class="marketing-content">
     <h3>Effective Marketing Strategies for Local Businesses</h3>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/amvQWl--uJw?si=GCYpcWQWXb88GDvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <!-- Embed YouTube Video on Marketing Strategy -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/amvQWl--uJw?si=GCYpcWQWXb88GDvs"
+        title="Marketing Strategies"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
 
     <h3>Changing the Narrative: Overcoming the Negative Perception of Kibra</h3>
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/6rIV8TlrbLQ?si=QTFvUAipXKEhVgo3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <!-- Embed YouTube Video on Perception of Kibra -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/6rIV8TlrbLQ?si=QTFvUAipXKEhVgo3"
+        title="Overcoming Negative Perceptions"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
-  </section>
+  </div>
+</section>
 
+<script>
+  document.querySelectorAll(".accordion").forEach((accordion) => {
+    accordion.addEventListener("click", () => {
+      accordion.classList.toggle("active");
+      const panel = accordion.nextElementSibling;
+      panel.style.maxHeight = panel.style.maxHeight ? null : `${panel.scrollHeight}px`;
+    });
+  });
+</script>
 
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
-      });
-    }
-  </script>
 
 
    <!-- Footer Section -->

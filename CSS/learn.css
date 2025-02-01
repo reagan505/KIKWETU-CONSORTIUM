@@ -55,6 +55,12 @@ h2 {
   border-bottom: 2px solid #3498db;
 }
 
+.accordion-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .accordion {
   background-color: #3498db;
   color: #fff;
@@ -67,11 +73,16 @@ h2 {
   font-size: 1.2em;
   margin: 1rem 0;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
 }
 
 .accordion:hover {
   background-color: #2980b9;
   transform: scale(1.05); /* Adds a slight scale effect */
+}
+
+.accordion.active {
+  background-color: #2980b9;
 }
 
 .panel {
@@ -82,10 +93,8 @@ h2 {
   font-size: 1.1em;
   margin-bottom: 1rem;
   border-left: 4px solid #3498db;
-}
-
-.accordion.active {
-  background-color: #2980b9;
+  transition: max-height 0.3s ease;
+  border-radius: 0 0 5px 5px;
 }
 
 .panel p {
@@ -114,6 +123,18 @@ h2 {
   height: 100%;
 }
 
+/* Additional Styles */
+.section-title {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  color: #2e4e14;
+}
+
+.marketing-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 /* Footer Styles (Optional) */
 footer {
@@ -181,3 +202,4 @@ footer button:hover {
     font-size: 1.8rem;
   }
 }
+
