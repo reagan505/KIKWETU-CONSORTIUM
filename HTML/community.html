@@ -97,7 +97,10 @@
         </div>
     </footer>
 
-    <script src="../JS/script.js"></script> <!-- Separate JavaScript File -->
+    <script>
+         document.querySelector(".menu-toggle").addEventListener("click", () => {
+      document.querySelector("nav ul").classList.toggle("active");
+    });
+    </script>
 </body>
 </html>
-
