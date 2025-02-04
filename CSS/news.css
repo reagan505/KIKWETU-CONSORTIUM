@@ -19,6 +19,7 @@ header .logo img {
   width: auto;
 }
 
+/* Navigation Styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -38,6 +39,12 @@ nav ul li a:hover {
   color: #52f312;
 }
 
+/* Hide Menu Toggle Button on Larger Screens */
+header .menu-toggle {
+  display: none;
+}
+
+/* News Section */
 .news-container {
   max-width: 1200px;
   margin: 3rem auto;
@@ -102,6 +109,7 @@ nav ul li a:hover {
   background-color: #1d8122;
 }
 
+/* Footer Section */
 footer {
   background: linear-gradient(45deg, #000000, #1b472b);
   color: #fff;
@@ -139,7 +147,8 @@ footer button:hover {
   background: #1d8122;
 }
 
-@media (max-width: 768px) {
+/* Responsive Design for Header and Navigation */
+@media screen and (max-width: 768px) {
   header {
       flex-direction: column;
       align-items: flex-start;
@@ -168,6 +177,45 @@ footer button:hover {
 
   .news-text {
     font-size: 0.9rem;
+  }
+
+  /* Show Menu Toggle Button on Small Screens */
+  header .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  nav ul {
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #000;
+    padding: 1rem 0;
+    border-top: 1px solid #fff;
+  }
+
+  nav ul.active {
+    display: flex; /* Show the menu when it's active */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  header .logo img {
+    height: 50px; /* Adjust the logo size for smaller screens */
+  }
+
+  nav ul li {
+    margin: 0.3rem 0;
   }
 }
 

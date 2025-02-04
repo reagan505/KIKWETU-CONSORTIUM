@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* Modernized Header Styles */
+/* Header Styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -42,6 +42,11 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #52f312;
+}
+
+/* Hide the Menu Toggle Button on Larger Screens */
+header .menu-toggle {
+  display: none;
 }
 
 /* Business Section */
@@ -176,18 +181,41 @@ footer button:hover {
   background: #1d8122;
 }
 
-@media (max-width: 768px) {
+/* Responsive Design for Header */
+@media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
   }
 
   nav ul {
+    display: none; /* Hide navigation menu by default */
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  header .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
   }
 
   nav ul li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
   }
 }

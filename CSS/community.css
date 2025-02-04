@@ -1,4 +1,4 @@
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +11,7 @@ body {
   color: #333;
 }
 
+/* Header Styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -25,6 +26,7 @@ header .logo img {
   width: auto;
 }
 
+/* Navigation Styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -44,6 +46,10 @@ nav ul li a:hover {
   color: #52f312;
 }
 
+/* Menu Toggle Button - Hidden by Default */
+header .menu-toggle {
+  display: none;
+}
 
 /* Hero Section */
 .hero {
@@ -147,22 +153,38 @@ footer button:hover {
   background: #1d8122;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   header {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   nav ul {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Hide the navigation menu by default */
+  }
+
+  nav ul.active {
+    display: flex; /* Show navigation menu when active */
   }
 
   nav ul li {
-      margin: 0.5rem 0;
+    margin: 0.5rem 0;
+  }
+
+  header .menu-toggle {
+    display: block; /* Show the menu toggle button */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
   .hero h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }
+

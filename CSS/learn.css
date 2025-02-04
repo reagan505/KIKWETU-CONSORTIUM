@@ -18,7 +18,7 @@ header {
 }
 
 header .logo img {
-  height: 71px; /* Adjust the size of the logo */
+  height: 71px;
   width: auto;
 }
 
@@ -41,6 +41,56 @@ nav ul li a:hover {
   color: #52f312;
 }
 
+/* Responsive Design for Header */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none; /* Hide navigation menu by default */
+    width: 100%;
+    background: #000;
+    padding: 1rem 0;
+    border-top: 1px solid #fff;
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when toggled */
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  header .logo img {
+    height: 50px;
+  }
+
+  nav ul li {
+    margin: 0.3rem 0;
+  }
+}
+
 /* Section Styles */
 .section {
   padding: 3rem 2rem;
@@ -48,7 +98,7 @@ nav ul li a:hover {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   color: #2c3e50;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
@@ -59,18 +109,19 @@ h2 {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
+  padding: 0 1rem;
 }
 
 .accordion {
   background-color: #3498db;
   color: #fff;
   cursor: pointer;
-  padding: 15px;
+  padding: 1rem;
   width: 100%;
   text-align: left;
   border: none;
   outline: none;
-  font-size: 1.2em;
+  font-size: clamp(1rem, 1.2vw, 1.2em);
   margin: 1rem 0;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border-radius: 5px;
@@ -78,7 +129,7 @@ h2 {
 
 .accordion:hover {
   background-color: #2980b9;
-  transform: scale(1.05); /* Adds a slight scale effect */
+  transform: scale(1.05);
 }
 
 .accordion.active {
@@ -91,6 +142,7 @@ h2 {
   display: none;
   overflow: hidden;
   font-size: 1.1em;
+  max-height: 0;
   margin-bottom: 1rem;
   border-left: 4px solid #3498db;
   transition: max-height 0.3s ease;
@@ -104,15 +156,14 @@ h2 {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  max-width: 80%;
   background: #000;
   margin-bottom: 2em;
-  width: 80%; /* Reduce the width to 80% */
-  margin-left: auto;  /* Center the video container */
-  margin-right: auto; /* Center the video container */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video-container iframe {
@@ -123,20 +174,7 @@ h2 {
   height: 100%;
 }
 
-/* Additional Styles */
-.section-title {
-  font-size: 2rem;
-  margin: 1.5rem 0;
-  text-align: center;
-  color: #2e4e14;
-}
-
-.marketing-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Footer Styles (Optional) */
+/* Footer Styles */
 footer {
   background: linear-gradient(45deg, #000000, #1b472b);
   color: #fff;
@@ -149,15 +187,12 @@ footer a {
   text-decoration: none;
 }
 
-footer form {
-  margin-top: 1rem;
-}
-
 footer input {
+  width: 100%;
   padding: 0.5rem;
   border: none;
   border-radius: 5px;
-  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 footer button {
@@ -168,38 +203,10 @@ footer button {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 100%;
 }
 
 footer button:hover {
   background: #1d8122;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  section {
-    padding: 0 1em;
-  }
-
-  .accordion {
-    font-size: 1.1em;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .accordion {
-    font-size: 1em;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
 }
 

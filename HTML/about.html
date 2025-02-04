@@ -10,8 +10,9 @@
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <img src="../1.png" alt="Kikwetu Consortium Logo">
+        <img src="../1.png" alt="Kikwetu Consortium Logo">
     </div>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
@@ -49,6 +50,7 @@
     <a href="./localB.html" class="cta-btn">Discover Local Businesses</a>
   </section>
 
+  <!-- Footer Section -->
   <footer id="contact">
     <div class="social-links">
       <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
@@ -65,5 +67,13 @@
       </form>
     </div>
   </footer>
+
+  <script>
+    // Menu Toggle Functionality
+    document.querySelector(".menu-toggle").addEventListener("click", () => {
+      document.querySelector("nav ul").classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
+

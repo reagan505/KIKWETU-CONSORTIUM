@@ -12,6 +12,7 @@
     <div class="logo">
         <img src="../1.png" alt="Kikwetu Consortium Logo">
     </div>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
@@ -24,103 +25,106 @@
         <li><a href="../HTML/contact.html">Contact</a></li>
       </ul>
     </nav>
-</header>
+  </header>
 
-<section id="ethical-business">
-  <h2 class="section-title">Ethical Business Practices</h2>
-  <div class="accordion-container">
-    <button class="accordion">Fair Pricing Strategies</button>
-    <div class="panel">
-      <p>
-        Fair pricing means setting clear and honest prices for your products or services. Avoid middlemen who take high
-        commissions. Your prices should reflect the real value of what you offer, considering costs and local standards.
-        Being transparent builds trust with customers and helps your business grow. Fair pricing attracts loyal
-        customers and makes your business more successful in the long run, especially in the tourism industry. Keep it
-        simple, fair, and clear for everyone to understand.
-      </p>
+  <section id="ethical-business">
+    <h2 class="section-title">Ethical Business Practices</h2>
+    <div class="accordion-container">
+      <button class="accordion">Fair Pricing Strategies</button>
+      <div class="panel">
+        <p>Fair pricing means setting clear and honest prices for your products or services. Avoid middlemen who take high commissions...</p>
+      </div>
+
+      <button class="accordion">Transparency in Customer Service</button>
+      <div class="panel">
+        <p>Customer service is key to building trust. Find tips for maintaining transparency and exceptional service.</p>
+      </div>
     </div>
 
-    <button class="accordion">Transparency in Customer Service</button>
-    <div class="panel">
-      <p>Customer service is key to building trust. Find tips for maintaining transparency and exceptional service.</p>
-    </div>
-  </div>
-
-  <h2 class="section-title">Understanding Copyrights</h2>
-  <div class="video-container">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/tV6j_ZLEqkU?si=EU2kEcikDWGOAJDV"
-      title="Understanding Copyrights"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-  </div>
-</section>
-
-<section id="marketing-strategy">
-  <h2 class="section-title">Education on Marketing Strategy</h2>
-
-  <div class="marketing-content">
-    <h3>Effective Marketing Strategies for Local Businesses</h3>
+    <h2 class="section-title">Understanding Copyrights</h2>
     <div class="video-container">
       <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/amvQWl--uJw?si=GCYpcWQWXb88GDvs"
-        title="Marketing Strategies"
+        src="https://www.youtube.com/embed/tV6j_ZLEqkU?si=EU2kEcikDWGOAJDV"
+        title="Understanding Copyrights"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
     </div>
+  </section>
 
-    <h3>Changing the Narrative: Overcoming the Negative Perception of Kibra</h3>
-    <div class="video-container">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/6rIV8TlrbLQ?si=QTFvUAipXKEhVgo3"
-        title="Overcoming Negative Perceptions"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+  <section id="marketing-strategy">
+    <h2 class="section-title">Education on Marketing Strategy</h2>
+
+    <div class="marketing-content">
+      <h3>Effective Marketing Strategies for Local Businesses</h3>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/amvQWl--uJw?si=GCYpcWQWXb88GDvs"
+          title="Marketing Strategies"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h3>Changing the Narrative: Overcoming the Negative Perception of Kibra</h3>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/6rIV8TlrbLQ?si=QTFvUAipXKEhVgo3"
+          title="Overcoming Negative Perceptions"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  document.querySelectorAll(".accordion").forEach((accordion) => {
-    accordion.addEventListener("click", () => {
-      accordion.classList.toggle("active");
-      const panel = accordion.nextElementSibling;
-      panel.style.maxHeight = panel.style.maxHeight ? null : `${panel.scrollHeight}px`;
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Accordion Functionality
+      document.querySelectorAll(".accordion").forEach((accordion) => {
+        accordion.addEventListener("click", () => {
+          const panel = accordion.nextElementSibling;
+
+          // Toggle active class for the accordion
+          accordion.classList.toggle("active");
+
+          // Smoothly toggle panel visibility
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = `${panel.scrollHeight}px`;
+          }
+        });
+      });
+
+      // Menu Toggle Functionality
+      document.querySelector(".menu-toggle").addEventListener("click", () => {
+        document.querySelector("nav ul").classList.toggle("active");
+      });
     });
-  });
-</script>
+  </script>
 
-
-
-   <!-- Footer Section -->
-   <footer id="contact">
+  <!-- Footer Section -->
+  <footer id="contact">
     <div class="social-links">
-        <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
     </div>
     <div class="contact-info">
-        <p>Email: info@discoverkibra.com</p>
-        <p>Phone: +254 123 456 789</p>
+      <p>Email: info@discoverkibra.com</p>
+      <p>Phone: +254 123 456 789</p>
     </div>
     <div class="newsletter">
-        <p>Stay Updated with Kibra’s Latest Events and Offers!</p>
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Subscribe</button>
-        </form>
+      <p>Stay Updated with Kibra’s Latest Events and Offers!</p>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
+
