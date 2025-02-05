@@ -2,14 +2,14 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(45deg, #39fa12, #102b0a,  #0fff4b);
+  background:  #102b0a;
   color: #333;
   background-attachment: scroll;
 }
 
 header {
   background: #2e6d3e;
-  color: #3fc21e; /* White text */
+  color: #ffffff; /* White text */
   text-align: center;
   padding: 1.5rem 0; /* Added vertical padding */
   font-size: 1.8rem; /* Increased font size for emphasis */
