@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Local Businesses</title>
   <link rel="stylesheet" href="../CSS/localB.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
   <!-- Header Section -->
   <header>
     <div class="logo">
-        <img src="../1.png" alt="Kikwetu Consortium Logo">
+      <img src="../1.png" alt="Kikwetu Consortium Logo">
     </div>
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
     <nav>
@@ -44,26 +44,40 @@
             Phone: +254 712 345 678<br>
             Email: <a href="mailto:info@kibraartcollective.com">info@kibraartcollective.com</a>
           </div>
-          <button class="tourism-button" onclick="redirectToTourism()">Explore</button>
+          <button class="tourism-button" onclick="redirectToTourism()" aria-label="Explore Kibra Art Collective">Explore</button>
         </div>
       </div>
-
-      <!-- Duplicate Business Card -->
-      <div class="business-card">
-        <img src="../teenwork.jpg" alt="Kibra Art Collective">
-        <div class="content">
-          <h3>Kibra Art Collective</h3>
-          <p>The Kibra Art Collective features handcrafted art pieces that reflect the vibrant culture of Kibra. From sculptures to paintings, each piece has a story to tell.</p>
-          <div class="contact-info">
-            Location: Stall 12, Kibra Cultural Market<br>
-            Phone: +254 712 345 678<br>
-            Email: <a href="mailto:info@kibraartcollective.com">info@kibraartcollective.com</a>
-          </div>
-          <button class="tourism-button" onclick="redirectToTourism()">Explore</button>
-        </div>
-      </div>
-
     </div>
+
+    <div class="business-card">
+      <img src="../uweza 1.jpg" alt="Kibra Art Collective">
+      <div class="content">
+        <h3>Kibra Art Collective</h3>
+        <p>The Kibra Art Collective features handcrafted art pieces that reflect the vibrant culture of Kibra. From sculptures to paintings, each piece has a story to tell.</p>
+        <div class="contact-info">
+          Location: Stall 12, Kibra Cultural Market<br>
+          Phone: +254 712 345 678<br>
+          Email: <a href="mailto:info@kibraartcollective.com">info@kibraartcollective.com</a>
+        </div>
+        <button class="tourism-button" onclick="redirectToTourism()" aria-label="Explore Kibra Art Collective">Explore</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="business-card">
+    <img src="../kibra.jpg" alt="Kibra Art Collective">
+    <div class="content">
+      <h3>Kibra Art Collective</h3>
+      <p>The Kibra Art Collective features handcrafted art pieces that reflect the vibrant culture of Kibra. From sculptures to paintings, each piece has a story to tell.</p>
+      <div class="contact-info">
+        Location: Stall 12, Kibra Cultural Market<br>
+        Phone: +254 712 345 678<br>
+        Email: <a href="mailto:info@kibraartcollective.com">info@kibraartcollective.com</a>
+      </div>
+      <button class="tourism-button" onclick="redirectToTourism()" aria-label="Explore Kibra Art Collective">Explore</button>
+    </div>
+  </div>
+</div>
   </section>
 
   <!-- Footer Section -->
@@ -91,11 +105,10 @@
       document.querySelector("nav ul").classList.toggle("active");
     });
 
-    function redirectToProductListing() {
-  alert("Redirecting to the product listing page...");
-  window.location.href = "shop.html";
-}
-
+    function redirectToTourism() {
+      alert("Redirecting to product listing...");
+      window.location.href = "../HTML/shop.html"; // Adjust the path to your tourism page.
+    }
   </script>
 
 </body>
