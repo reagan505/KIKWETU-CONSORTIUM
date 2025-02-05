@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  background: linear-gradient(45deg, #111010, #368f1f);
 }
 
 /* Header styles */
@@ -50,6 +51,7 @@ nav ul li a:hover {
 .container {
   max-width: 600px;
   margin: 0 auto;
+  color: #fff;
 }
 
 /* Contact form styles */
@@ -166,4 +168,3 @@ footer button:hover {
     margin: 0.5rem 0;
   }
 }
-

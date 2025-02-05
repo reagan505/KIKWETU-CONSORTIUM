@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Listing</title>
+  <link rel="stylesheet" href="../CSS/shop.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../1.png" alt="Kikwetu Consortium Logo">
+    </div>
+    <h1>Welcome to Our Product Listing</h1>
+  </header>
+
+
+  <main class="container">
+    <div id="product-list"></div>
+  </main>
+
+  <footer>
+    <p> All rights reserved.</p>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <p>Thank you for your interest! Redirecting to the shop...</p>
+    </div>
+  </div>
+
+  <script>
+    const products = [
+      { id: 1, name: "Handwoven Kitenge Fabrics", price: "ksh 3200", image: "../ASSETS/h kitenge.jpg" },
+      { id: 2, name: "African Beaded Necklaces", price: "ksh 1900", image: "../ASSETS/NK.jpg" },
+      { id: 3, name: "Handcrafted Wooden Masks", price: "ksh 6450", image: "../ASSETS/HC.jpg" },
+      { id: 4, name: "Safari-Themed T-Shirts", price: "ksh 2550", image: "../ASSETS/sk.jpg" },
+      { id: 1, name: "Handwoven Kitenge Fabrics", price: "ksh 3200", image: "../ASSETS/2hk.jpg" },
+      { id: 2, name: "African Beaded Necklaces", price: "ksh 1900", image: "../ASSETS/2nk.jpg" },
+      { id: 3, name: "Handcrafted Wooden Masks", price: "ksh 6400", image: "../ASSETS/1hc.jpg" },
+      { id: 4, name: "Safari-Themed T-Shirts", price: "ksh 2500", image: "../ASSETS/bsk.jpg" },
+      { id: 4, name: "Safari-Themed T-Shirts", price: "ksh 2500", image: "../ASSETS/psk.jpg" },
+    ];
+
+    const productList = document.getElementById("product-list");
+    const modal = document.getElementById("modal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    products.forEach(product => {
+      const productCard = document.createElement("div");
+      productCard.className = "product-card";
+
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <div class="product-details">
+          <h2 class="product-title">${product.name}</h2>
+          <p class="product-price">${product.price}</p>
+          <button class="cta" onclick="openModal()">Buy Now</button>
+        </div>
+      `;
+
+      productList.appendChild(productCard);
+    });
+
+    function openModal() {
+      modal.style.display = "block";
+    }
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.onclick = event => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
